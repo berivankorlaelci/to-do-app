@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todoapp
+    username: berokh
+    password: 'admin'
+    driver-class-name: org.postgresql.Driver
+  data:
+    jdbc:
+      dialect: postgresql
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+        format_sql: true
+
+
+    show-sql: true
+  application:
+    name: to-do-app
