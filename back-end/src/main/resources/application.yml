@@ -20,3 +20,6 @@ spring:
     show-sql: true
   application:
     name: to-do-app
+
+jwt:
+  key: Cu6IsWAOoyoWmPhgb8j7ZmUIIOlTcV0utsUaN42sdCKYQKDNL7szo932yX4I81Rds976Njx3fT/49Ah0KZkl7N7UXB81hxFL5lEbrPR1trCh91V6Wx4yu4z7MhrC1QF4olK0tWoxMc2Wsr8dvHhgyUc/zNiXbMXWFbs3d6CSlnU=

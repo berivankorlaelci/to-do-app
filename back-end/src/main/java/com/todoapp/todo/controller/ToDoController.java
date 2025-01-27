@@ -16,9 +16,7 @@ public class ToDoController {
     private ToDoService toDoService;
 
     @GetMapping("/get")
-    public List<ToDo> getTasks() {
-        return toDoService.getAll();
-    }
+    public List<ToDo> getTasks() { return toDoService.getAll(); }
 
     @GetMapping("/get/{id}")
     public Optional<ToDo> getToDo(@PathVariable Long id) { return toDoService.getToDo(id); }

@@ -12,9 +12,11 @@ import java.util.Optional;
 
 @Service
 public class ToDoService{
+    private final ToDoRepository toDoRepository;
 
-    @Autowired
-    private ToDoRepository toDoRepository;
+    ToDoService(ToDoRepository toDoRepository){
+        this.toDoRepository=toDoRepository;
+    }
 
     public List<ToDo> getAll(){
         return toDoRepository.findAll();
@@ -23,7 +25,7 @@ public class ToDoService{
     public Optional<ToDo> getToDo(Long id){ return toDoRepository.findById(id);}
 
     public ToDo saveToDo(ToDo toDo){
-        if(toDo.getId()==null){toDo.setCreatedAt(LocalDateTime.now());}
+         if(toDo.getId()==null){toDo.setCreatedAt(LocalDateTime.now());}
         toDo.setUpdatedAt(LocalDateTime.now());
         return toDoRepository.save(toDo);
     }
